@@ -23,6 +23,7 @@ def list_urls(lis, acc=None):
 def redirect_to_login(request):
     logging.error("FOUND")
     logging.error("redirect login")
+    logging.error(request.get_full_path_info())
     logging.error(vars(request))
     # for p in list_urls(urlconf.urlpatterns):
     #     logging.error(''.join(p))

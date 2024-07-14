@@ -16,7 +16,7 @@ def login_view(request):
     logging.error("Authentication form: ")
     logging.error(form)
     logging.error('request')
-    logging.error(vars(request))
+    # logging.error(vars(request))
     return render(request, 'accounts/login.html', {'form': form})
 
 def logout_view(request):
