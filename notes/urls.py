@@ -29,7 +29,7 @@ def redirect_to_login(request):
 
     logging.error("redirect_response")
     redirect_response = redirect('login')
-    logging.error(redirect_response)
+    logging.error(vars(redirect_response))
     return redirect_response
 
 urlpatterns = [
