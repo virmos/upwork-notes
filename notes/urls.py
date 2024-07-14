@@ -24,9 +24,13 @@ def redirect_to_login(request):
     logging.error("FOUND")
     logging.error("redirect login")
     logging.error(vars(request))
-    for p in list_urls(urlconf.urlpatterns):
-        logging.error(''.join(p))
-    return redirect('login')
+    # for p in list_urls(urlconf.urlpatterns):
+    #     logging.error(''.join(p))
+
+    logging.error("redirect_response")
+    redirect_response = redirect('login')
+    logging.error(redirect_response)
+    return redirect_response
 
 urlpatterns = [
     path('', redirect_to_login, name='home'),
